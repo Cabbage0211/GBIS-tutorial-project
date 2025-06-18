@@ -1,4 +1,4 @@
-# GBIS (Grid Base Inventory System) 背包系统使用教程配套项目
+# GBIS背包系统教程配套项目
 
 作者：[Java已死游戏当立](https://space.bilibili.com/3546831153793300)  
 
