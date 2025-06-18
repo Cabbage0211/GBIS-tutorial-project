@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://b5d7i7xx7w0u5"]
+[gd_scene load_steps=6 format=3 uid="uid://b5d7i7xx7w0u5"]
 
 [ext_resource type="PackedScene" uid="uid://p37tngc7wb7p" path="res://scenes/enemies/enemy_skin/skeleton_warrior.tscn" id="1_6xk8f"]
 [ext_resource type="Script" uid="uid://x1nujsdfa3tq" path="res://scenes/enemies/enemy.gd" id="1_8e3ao"]
+[ext_resource type="PackedScene" uid="uid://b6wq7ulpifpow" path="res://scenes/enemies/enemy_skin/skeleton_minion.tscn" id="2_fcftc"]
+[ext_resource type="PackedScene" uid="uid://ch3j6gvhbqp7y" path="res://scenes/enemies/enemy_skin/skeleton_rogue.tscn" id="3_lu5c6"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_6l58f"]
 height = 2.2
@@ -11,8 +13,7 @@ radius = 0.6
 collision_layer = 3
 collision_mask = 0
 script = ExtResource("1_8e3ao")
-
-[node name="Skeleton_Warrior" parent="." instance=ExtResource("1_6xk8f")]
+skins = Array[PackedScene]([ExtResource("2_fcftc"), ExtResource("3_lu5c6"), ExtResource("1_6xk8f")])
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1, 0)

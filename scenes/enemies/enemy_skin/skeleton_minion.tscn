@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6wq7ulpifpow"]
+
+[ext_resource type="PackedScene" uid="uid://515ss4ta1mfh" path="res://assets/KayKit_Skeletons_1.0_FREE/characters/gltf/Skeleton_Minion.glb" id="1_6ii1f"]
+[ext_resource type="Script" uid="uid://i1lepxhvyr44" path="res://scenes/enemies/enemy_skin/enemy_skin.gd" id="2_eavh2"]
+
+[node name="Skeleton_Minion" instance=ExtResource("1_6ii1f")]
+script = ExtResource("2_eavh2")

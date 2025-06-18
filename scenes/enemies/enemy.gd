@@ -3,15 +3,21 @@ class_name Enemy
 
 signal sig_dead(dead_enemy: Enemy)
 
+@export var skins: Array[PackedScene]
+
 @onready var collision_shape_3d: CollisionShape3D = $CollisionShape3D
-@onready var skeleton_warrior: EnemySkin = $Skeleton_Warrior
+@onready var skin: EnemySkin
 var hp: int = 3
+
+func _ready() -> void:
+	skin = skins[randi_range(0, skins.size() - 1)].instantiate()
+	add_child(skin)
 
 func get_hit(damage: int) -> void:
 	hp -= damage
 	if hp > 0:
-		skeleton_warrior.get_hit()
+		skin.get_hit()
 	else:
-		skeleton_warrior.dead()
+		skin.dead()
 		collision_shape_3d.queue_free()
 		sig_dead.emit(self)
