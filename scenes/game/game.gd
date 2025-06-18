@@ -10,12 +10,13 @@ var enemies: Array[Enemy] = []
 
 func _ready() -> void:
 	spawn_timer.timeout.connect(_spawn)
+	_spawn()
 
 func _spawn() -> void:
-	if enemies.size() < 1:
+	if enemies.size() < 2:
 		var enemy: Enemy = enemy_scene.instantiate()
+		enemy.position = Vector3(randf_range(-4.5, 4.5), 0, randf_range(-4.5, 4.5))
 		enemy_container.add_child(enemy)
-		enemy.global_position = Vector3(randf_range(-4.5, 4.5), 0, randf_range(-4.5, 4.5))
 		enemies.append(enemy)
 		enemy.sig_dead.connect(_on_enemy_dead)
 

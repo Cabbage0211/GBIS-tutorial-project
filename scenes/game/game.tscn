@@ -55,6 +55,7 @@ material = SubResource("StandardMaterial3D_0sr1o")
 [node name="Player" parent="." instance=ExtResource("1_sul5r")]
 
 [node name="SpawnTimer" type="Timer" parent="."]
+wait_time = 2.0
 autostart = true
 
 [node name="EnemyContainer" type="Node" parent="."]
