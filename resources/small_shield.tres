@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="MyEquipment" load_steps=3 format=3 uid="uid://b8y77k7illhp3"]
+
+[ext_resource type="Script" uid="uid://brdbiihc4k18i" path="res://scripts/item_data/my_equipment.gd" id="1_2cbbf"]
+[ext_resource type="PackedScene" uid="uid://bof1k81f5w3kq" path="res://scenes/droppable/items/shield_square.tscn" id="1_smxon"]
+
+[resource]
+script = ExtResource("1_2cbbf")
+drop_model = ExtResource("1_smxon")
+name_on_player = "Rectangle_Shield"
+item_name = "Small Shield"
+type = "SHIELD"
+columns = 1
+rows = 1
+metadata/_custom_type_script = "uid://brdbiihc4k18i"
