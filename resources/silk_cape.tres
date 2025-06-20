@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="MyEquipment" load_steps=4 format=3 uid="uid://rj2ppls4oiiw"]
+
+[ext_resource type="PackedScene" uid="uid://ba4rtu8dfjjj7" path="res://scenes/droppable/items/cape.tscn" id="1_l7ly5"]
+[ext_resource type="Script" uid="uid://brdbiihc4k18i" path="res://scripts/item_data/my_equipment.gd" id="1_v7vvl"]
+[ext_resource type="Texture2D" uid="uid://bcrexxyfwyh1a" path="res://assets/images/icons/cape.png" id="2_xiqjf"]
+
+[resource]
+script = ExtResource("1_v7vvl")
+drop_model = ExtResource("1_l7ly5")
+item_name = "Silk Cape"
+type = "CAPE"
+icon = ExtResource("2_xiqjf")
+columns = 2
+rows = 2
+metadata/_custom_type_script = "uid://brdbiihc4k18i"

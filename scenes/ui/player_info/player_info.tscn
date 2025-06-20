@@ -1,0 +1,79 @@
+[gd_scene load_steps=4 format=3 uid="uid://dxjb6tsa3x358"]
+
+[ext_resource type="Script" uid="uid://bynw71xcps7gr" path="res://scenes/ui/player_info/player_info.gd" id="1_7obx8"]
+[ext_resource type="Script" uid="uid://dg6xjko3rdcta" path="res://plugins/grid_base_inventory_system/core/view/slot/equipment_slot_view.gd" id="1_ojhcd"]
+[ext_resource type="Texture2D" uid="uid://b5bnldml13u0o" path="res://assets/images/ui/slot.png" id="2_7obx8"]
+
+[node name="PlayerInfo" type="ColorRect"]
+offset_left = 104.0
+offset_top = 168.0
+offset_right = 511.0
+offset_bottom = 509.0
+color = Color(0.141176, 0.141176, 0.141176, 1)
+script = ExtResource("1_7obx8")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -72.0
+offset_right = 72.0
+offset_bottom = 67.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 48
+text = "装备栏"
+
+[node name="HelmetSlot" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 155.0
+offset_top = 73.0
+offset_right = 251.0
+offset_bottom = 169.0
+script = ExtResource("1_ojhcd")
+slot_name = "Helmet Slot"
+base_size = 48
+background = ExtResource("2_7obx8")
+avilable_types = Array[String](["HELMET"])
+metadata/_custom_type_script = "uid://dg6xjko3rdcta"
+
+[node name="CapeSlot" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 155.0
+offset_top = 190.0
+offset_right = 251.0
+offset_bottom = 286.0
+script = ExtResource("1_ojhcd")
+slot_name = "Cape Slot"
+base_size = 48
+background = ExtResource("2_7obx8")
+avilable_types = Array[String](["CAPE"])
+metadata/_custom_type_script = "uid://dg6xjko3rdcta"
+
+[node name="MainHandSlot" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 23.0
+offset_top = 137.0
+offset_right = 119.0
+offset_bottom = 329.0
+script = ExtResource("1_ojhcd")
+slot_name = "Main Hand Slot"
+base_size = 48
+rows = 4
+background = ExtResource("2_7obx8")
+avilable_types = Array[String](["SWORD"])
+metadata/_custom_type_script = "uid://dg6xjko3rdcta"
+
+[node name="OffHandSlot" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 289.0
+offset_top = 137.0
+offset_right = 385.0
+offset_bottom = 329.0
+script = ExtResource("1_ojhcd")
+slot_name = "Off Hand Slot"
+base_size = 48
+rows = 4
+background = ExtResource("2_7obx8")
+avilable_types = Array[String](["SHIELD"])
+metadata/_custom_type_script = "uid://dg6xjko3rdcta"

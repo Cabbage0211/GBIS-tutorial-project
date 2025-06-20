@@ -1,14 +1,15 @@
-[gd_resource type="Resource" script_class="MyEquipment" load_steps=3 format=3 uid="uid://c63bvx1wfcl5p"]
+[gd_resource type="Resource" script_class="MyEquipment" load_steps=4 format=3 uid="uid://c63bvx1wfcl5p"]
 
 [ext_resource type="Script" uid="uid://brdbiihc4k18i" path="res://scripts/item_data/my_equipment.gd" id="1_n24dr"]
 [ext_resource type="PackedScene" uid="uid://bvbuyynpreo4b" path="res://scenes/droppable/items/sword_1_handed.tscn" id="1_ryrf2"]
+[ext_resource type="Texture2D" uid="uid://beqqpxokjrf8y" path="res://assets/images/icons/small_sword.png" id="2_by0f1"]
 
 [resource]
 script = ExtResource("1_n24dr")
 drop_model = ExtResource("1_ryrf2")
-name_on_player = "1H_Sword"
 item_name = "Small Sword"
 type = "SWORD"
+icon = ExtResource("2_by0f1")
 columns = 1
-rows = 1
+rows = 3
 metadata/_custom_type_script = "uid://brdbiihc4k18i"

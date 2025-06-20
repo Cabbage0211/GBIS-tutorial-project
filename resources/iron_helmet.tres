@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="MyEquipment" load_steps=4 format=3 uid="uid://cgbntqjd38xn6"]
+
+[ext_resource type="PackedScene" uid="uid://gbyq6a15vcmn" path="res://scenes/droppable/items/helmet.tscn" id="1_jegpa"]
+[ext_resource type="Script" uid="uid://brdbiihc4k18i" path="res://scripts/item_data/my_equipment.gd" id="1_jl35n"]
+[ext_resource type="Texture2D" uid="uid://ot2pudwp5l1u" path="res://assets/images/icons/helmet.png" id="2_sca0b"]
+
+[resource]
+script = ExtResource("1_jl35n")
+drop_model = ExtResource("1_jegpa")
+item_name = "Iron Helmet"
+type = "HELMET"
+icon = ExtResource("2_sca0b")
+columns = 2
+rows = 2
+metadata/_custom_type_script = "uid://brdbiihc4k18i"

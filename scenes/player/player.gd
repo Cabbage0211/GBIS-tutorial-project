@@ -10,6 +10,9 @@ signal sig_player_cause_damage
 
 const GRAVITY := 40.0 * Vector3.DOWN
 
+var inv_name = "inv_1"
+var is_busy: bool = false
+
 func _ready() -> void:
 	Global.player = self
 	player_skin.damage_timer.timeout.connect(sig_player_cause_damage.emit)
@@ -36,7 +39,7 @@ func _move(delta: float) -> void:
 	move_and_slide()
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("attack"):
+	if not is_busy and not GBIS.has_moving_item() and event.is_action_pressed("attack"):
 		player_skin.attack()
 	if event.is_action_released("attack"):
 		player_skin.stop_attack()
